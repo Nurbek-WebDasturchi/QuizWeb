@@ -1,0 +1,181 @@
+/* ===========================
+   TestPlatform — Custom CSS
+   =========================== */
+
+:root {
+  --primary: #4361ee;
+  --primary-light: #eef0ff;
+  --success: #2ec4b6;
+  --warning: #ff9f1c;
+  --danger: #e71d36;
+  --dark: #1a1a2e;
+  --gray: #6c757d;
+  --light: #f8f9fa;
+  --border-radius: 1rem;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Auth Pages */
+.auth-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+}
+
+.auth-logo {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Dashboard */
+.stat-card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Upload Area */
+.upload-area {
+  border: 2px dashed #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover,
+.upload-area.dragover {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+/* Test Page */
+.option-btn {
+  border: 2px solid #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.option-btn.selected {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: white;
+}
+
+.option-btn.selected .badge {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+/* Question Navigator */
+.q-nav-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.q-nav-btn.btn-success {
+  background-color: #198754;
+  border-color: #198754;
+  color: white;
+}
+
+/* Result Page */
+#resultCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Utility */
+.rounded-3 {
+  border-radius: var(--border-radius) !important;
+}
+.rounded-4 {
+  border-radius: 1.25rem !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-card .card-body {
+    padding: 2rem !important;
+  }
+
+  .stat-card .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .option-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
